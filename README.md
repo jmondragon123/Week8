@@ -25,18 +25,27 @@ Vulnerability #2:SQL Injection
 ## Green
 
 Vulnerability #1: User Enumeration
-	When an existing user enters the wrong password the error message is returned bold. When a non existing user enters a password the error message is returned not bold.
+	When an existing user enters the wrong password the error message is returned bold. When a non existing user enters a 
+	password the error message is returned not bold.
 
 Vulnerability #2: Cross-Site Scripting
+```
 Look</td><IFRAME SRC=“javascript:alert(‘Jorge Mondragon’);”></IFRAME><td>HI
-
+```
+```
 Look</td><IMG SRC="#" ONERROR="alert('JorgeMondragon')"/><td>HI
-
+```
 ## Red
 Vulnerability #1: Insecure Direct Object Reference
+```
 	https://35.193.161.23/red/public/salesperson.php?id=10
-	https://35.193.161.23/red/public/salesperson.php?id=11
-On the Green and Blue website, whenever an id value over 9 is inserted the website redirects the user to the salesperson landing page.
+```
+```
+https://35.193.161.23/red/public/salesperson.php?id=11
+```
+
+On the Green and Blue website, whenever an id value over 9 is inserted the website redirects the user to the 
+salesperson landing page.
 
 Vulnerability #2: Cross-Site Request Forgery
 
